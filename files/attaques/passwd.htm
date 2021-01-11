@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+	<meta charset="utf-8">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="copyright" content="2005 by Jean-Fran�ois Pillou">
+<META NAME="ROBOTS" content="all">
+<META NAME="author" content="Jean-Fran�ois Pillou">
+<META NAME="subject" content="Comment �a marche? [Les mots de passe]">
+<META NAME="topic" content="Mot de passe">
+<META NAME="keywords" content="Mot de passe, Mots de passe, Password, Passwords, identifiant, login, username, Brute force cracking, Attaque par force brute">
+<META NAME="title" content="Attaques - Protection par mot de passe">
+<title>Mots de passe</title>
+<link rel="stylesheet" href="../ccm.css" type="text/css">
+
+
+<link rel="alternate" type="application/rss+xml" title="CCM: Actualit&eacute; informatique" href="http://www.commentcamarche.net/rss/actualite.php3">
+<link rel="alternate" type="application/rss+xml" title="CCM: Actualit&eacute;s du site CommentCaMarche.net" href="http://www.commentcamarche.net/rss/rss.php3">
+</head>
+
+<body>
+
+ Attaques - Protection par mot de passe
+
+
+Attaques / Arnaques
+Piratage
+Pirates
+Typologie de pirates
+M&eacute;thodologie
+Exploits
+Attaques cryptographiques
+Mot de passe
+Man in the middle
+Rejeu
+D&eacute;ni de service
+D&eacute;ni de service
+Attaque par r&eacute;flexion
+Ping de la mort
+Fragmentation
+Land
+SYN
+<tr><th><span class="rouge">Techniques
+Usurpation d'adresse IPspoofing
+Vol de sessionhijacking
+ARP poisoning
+Ecoute r&eacute;seausniffers
+Balayage de ports Port scanning
+D&eacute;bordement de tampon Buffer overflow
+Spam 
+Mail-bombing
+Vuln&eacute;rabilit&eacute;s du web
+Attaques web
+Falsification de la saisie
+Manipulation d'URL
+Cross-Site Scripting
+Injection SQL
+Arnaques
+Ing&eacute;nierie socialesocial engineering
+Scam
+Phishing
+Loteries
+Plus d'information
+Virus
+Cheval de Troie
+Spyware
+Hoax
+FAQ s&eacute;curit&eacute;
+FAQ Internet
+
+
+<a name="passwd" class="ancre"></a><h2>Les mots de passe</h2>
+
+<p align="justify">Lors de la connexion &agrave; un syst&egrave;me informatique, celui-ci demande la plupart du temps un
+
+<b>identifiant</b> (en anglais <i>login</i> ou <i>username</i>) et un <b>mot de passe</b> (en anglais <i>password</i>) pour y acc&eacute;der. Ce couple <i>identifiant/mot de passe</i>
+
+forme ainsi la cl&eacute; permettant d'obtenir un acc&egrave;s au syst&egrave;me.
+
+<p align="justify">Si l'identifiant est g&eacute;n&eacute;ralement automatiquement attribu&eacute; par le
+syst&egrave;me ou son administrateur, le choix du mot de passe est souvent laiss&eacute; libre &agrave; l'utilisateur.
+Ainsi, la plupart des utilisateurs, estimant qu'ils n'ont rien de vraiment secret &agrave; prot&eacute;ger,
+se contentent d'utiliser un mot de passe facile &agrave; retenir (par exemple leur identifiant, le pr&eacute;nom de leur conjoint ou leur date de naissance).
+
+<p align="justify">Or, si les donn&eacute;es sur le compte de l'utilisateur n'ont pas un caract&egrave;re strat&eacute;gique,
+l'acc&egrave;s au compte de l'utilisateur peut constituer une porte ouverte vers le syst&egrave;me tout entier.
+En effet, d&egrave;s qu'un pirate obtient un acc&egrave;s
+&agrave; un compte d'une machine, il lui est possible d'&eacute;largir son champ d'action en obtenant la liste
+des utilisateurs autoris&eacute;s &agrave; se connecter &agrave; la machine. A l'aide d'outils de g&eacute;n&eacute;ration
+de mots de passe, le pirate peut essayer un grand nombre de mots de passe g&eacute;n&eacute;r&eacute;s al&eacute;atoirement
+ou &agrave; l'aide d'un dictionnaire (&eacute;ventuellement une combinaison des deux). S'il
+trouve par hasard le mot de passe de l'administrateur, il obtient alors toutes les permissions sur la machine !
+
+<p align="justify">De plus, &agrave; partir d'une machine du r&eacute;seau, le pirate peut &eacute;ventuellement obtenir un acc&egrave;s
+sur le r&eacute;seau local, ce qui signifie qu'il peut dresser une cartographie des autres serveurs
+c&ocirc;toyant celui auquel il a obtenu un acc&egrave;s.
+
+<p align="justify">Les mots de passe des utilisateurs repr&eacute;sentent donc la premi&egrave;re d&eacute;fense contre
+les attaques envers un syst&egrave;me, c'est la raison pour laquelle il est n&eacute;cessaire de d&eacute;finir
+une politique en mati&egrave;re de mots de passe afin d'imposer aux utilisateurs le choix d'un mot de passe
+suffisamment s&eacute;curis&eacute;.
+
+<a name="methodes" class="ancre"></a><h2>M&eacute;thodes d'attaque</h2>
+
+<p align="justify">La plupart des syst&egrave;mes sont configur&eacute;s de mani&egrave;re &agrave;
+bloquer temporairement le compte d'un utilisateur apr&egrave;s un certain nombre de
+tentatives de connexion infructueuses. Ainsi, un pirate peut difficilement s'infiltrer
+sur un syst&egrave;me de cette fa&ccedil;on.
+
+<p align="justify">En contrepartie, un pirate peut se servir de se m&eacute;canisme d'auto-d&eacute;fense
+pour bloquer l'ensemble des comptes utilisateurs afin de provoquer un <a href="dos.htm">d&eacute;ni de service</a>.
+
+<p align="justify">Sur la plupart des syst&egrave;mes les mots de passe sont stock&eacute;s de
+mani&egrave;re chiffr&eacute;e (&laquo;&nbsp;crypt&eacute;e&nbsp;&raquo;) dans un
+fichier ou une base de donn&eacute;es.
+
+<p align="justify">N&eacute;anmois, lorsqu'un pirate obtient un acc&egrave;s au syst&egrave;me et obtient ce fichier, il lui est
+possible de tenter de casser le mot de passe d'un utilisateur en particulier ou bien
+de l'ensemble des comptes utilisateurs.
+
+<a name="force-brute" class="ancre"></a><h2>Attaque par force brute</h2>
+
+<p align="justify">On appelle ainsi &laquo;&nbsp;<b>attaque par force brute</b>&nbsp;&raquo; (en anglais &laquo;&nbsp;<i>brute force cracking</i>&nbsp;&raquo;,
+parfois &eacute;galement <i>attaque exhaustive</i>)
+le cassage d'un mot de passe en testant tous les mots de passe possibles. Il existe un grand nombre
+d'outils, pour chaque syst&egrave;me d'exploitation, permettant de r&eacute;aliser ce genre d'op&eacute;ration. Ces
+outils servent aux administrateurs syst&egrave;me &agrave; &eacute;prouver la solidit&eacute; des mots de passe
+de leurs utilisateurs mais leur usage est d&eacute;tourn&eacute; par les pirates informatiques pour s'introduire
+dans les syst&egrave;mes informatiques.
+
+<a name="dictionnaire" class="ancre"></a><h2>Attaque par dictionnaire</h2>
+
+<p align="justify">Les outils d'attaque par force brute peuvent demander des heures, voire des jours, de calcul m&ecirc;me
+avec des machines &eacute;quip&eacute;es de processeurs puissants. Ainsi, une alternative consiste
+&agrave; effectuer une &laquo;&nbsp;<b>attaque par dictionnaire</b>&nbsp;&raquo;. En effet, la plupart du temps
+les utilisateurs choisissent des mots de passe ayant une signification r&eacute;elle. Avec ce type d'attaques, un tel mot de passe
+peut &ecirc;tre craqu&eacute; en quelques minutes.
+
+<a name="hybride" class="ancre"></a><h2>Attaque hybride</h2>
+
+<p align="justify">Le dernier type d'attaques de ce type, appel&eacute;es &laquo;&nbsp;<b>attaques hybrides</b>&nbsp;&raquo;,
+vise particuli&egrave;rement les mots de passe constitu&eacute; d'un mot traditionnel et suivi d'une lettre ou d'un
+chiffre (tel que &laquo;&nbsp;marechal6&nbsp;&raquo;). Il s'agit d'une combinaison d'attaque par force brute et
+d'attaque par dictionnaire.
+
+<p align="justify">Il existe enfin des moyens permettant au pirate d'obtenir les mots de passe
+des utilisateurs&nbsp;:
+<ul>
+<li>Les <a href="../virus/keylogger.htm">key loggers</a>
+(litt&eacute;ralement &laquo;&nbsp;enregistreurs de touches&nbsp;&raquo;), sont des logiciels qui,
+lorsqu'ils sont install&eacute;s sur le poste de l'utilisateur, permettent d'enregistrer les frappes de claviers
+saisies par l'utilisateur. Les syst&egrave;mes d'exploitation r&eacute;cents poss&egrave;dent des m&eacute;moires
+tampon prot&eacute;g&eacute;es permettant de retenir temporairement le mot de passe et accessibles uniquement
+par le syst&egrave;me.
+<li>L'<a href="ingenierie-sociale.htm">ing&eacute;nierie sociale</a> consiste &agrave; exploiter la na&iuml;vet&eacute; des individus pour obtenir
+des informations. Un pirate peut ainsi obtenir le mot de passe d'un individu en se faisant passer pour un administrateur
+du r&eacute;seau ou bien &agrave; l'inverse appeler l'&eacute;quipe de support en demandant de r&eacute;initialiser
+le mot de passe en pr&eacute;textant un caract&egrave;re d'urgence&nbsp;;
+<li>L'<b>espionnage</b> repr&eacute;sente la plus vieille des m&eacute;thodes. Il suffit en effet parfois
+&agrave; un pirate d'observer les papiers autour de l'&eacute;cran de l'utilisateur ou sous le clavier afin
+d'obtenir le mot de passe. Par ailleurs, si le pirate fait partie de l'entourage de la victime, un simple
+coup d'oeil par dessus son &eacute;paule lors de la saisie du mot de passe peut lui permettre de le voir
+ou de le deviner.
+</ul>
+
+<a name="choix" class="ancre"></a><h2>Choix du mot de passe</h2>
+
+<p align="justify">Il est ais&eacute;ment compr&eacute;hensible que plus un mot de passe est long, plus il est
+difficile &agrave; <a href="../crypto/crypto.htm">casser</a>. D'autre part, un mot de passe constitu&eacute; uniquement de chiffres
+sera beaucoup plus simple &agrave; casser qu'un mot de passe contenant des lettres :</p>
+
+<p align="justify">Un mot de passe de 4 chiffres correspond &agrave; 10 000 possibilit&eacute;s (10<sup>4</sup>).
+Si ce chiffre para&icirc;t &eacute;lev&eacute;, un ordinateur dot&eacute; d'une configuration modeste
+est capable de le casser en quelques minutes.<br/>
+
+On lui pr&eacute;f&egrave;rera un mot de passe de 4 lettres, pour lequel il existe 456972 possibilit&eacute;s (26<sup>4</sup>).
+Dans le m&ecirc;me ordre d'id&eacute;e, un mot de passe m&ecirc;lant chiffres et lettres, voire &eacute;galement
+des majuscules et des caract&egrave;res sp&eacute;ciaux sera encore plus difficile &agrave; casser.
+
+Mots de passe
+	<li>votre identifiant</li>
+	<li>votre nom</li>
+	<li>votre pr&eacute;nom ou celui d'un proche (conjoint, enfant, etc.)&nbsp;;</li>
+	<li>un mot du dictionnaire&nbsp;;</li>
+	<li>un mot &agrave; l'envers (les outils de cassage de mots de passe prennent en compte cette possibilit&eacute;)&nbsp;;</li>
+	<li>un mot suivi d'un chiffre, de l'ann&eacute;e en cours ou d'une ann&eacute;e de naissance (par exemple &laquo;&nbsp;password1999&nbsp;&raquo;).</li>
+
+</body>
+</html>

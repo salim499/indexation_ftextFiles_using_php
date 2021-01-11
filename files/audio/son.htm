@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+
+<head>
+	<meta charset="utf-8">
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<META NAME="copyright" content="1998 by Jean-Fran�ois Pillou">
+<META NAME="ROBOTS" content="all">
+<META NAME="author" content="Jean-Fran�ois Pillou">
+<META NAME="subject" content="Comment �a marche? [L'informatique - MP3]">
+<META NAME="topic" content="Son">
+<META NAME="keywords" content="son, sons, Son, Sons, num�rique, num&eacute;rique, son numerique, MIDI, midi, Midi, FM, fm, Fm, wav, Wav, musique, informations, haut parleur, haut-parleur">
+<META NAME="title" content="Le son num&eacute;rique">
+<title>Le son num&eacute;rique</title>
+<link rel="stylesheet" href="../ccm.css" type="text/css">
+
+
+
+<link rel="alternate" type="application/rss+xml" title="CCM: Actualit&eacute; informatique" href="http://www.commentcamarche.net/rss/actualite.php3">
+<link rel="alternate" type="application/rss+xml" title="CCM: Actualit&eacute;s du site CommentCaMarche.net" href="http://www.commentcamarche.net/rss/rss.php3">
+</head>
+
+
+<body>
+Son numérique
+Son numérique
+Formats de fichiers
+MP3
+Ogg Vorbis
+AAC m4a
+Home Cinema
+Home cinema
+Configuration spatiale
+Dolby Surround
+Dolby Digital
+DTS
+THX
+Formats d'échange
+S/PDIF
+Voir aussi :
+Ordinateur
+Ordinateur portable
+Processeur
+Disque dur
+Carte graphique
+Carte son
+FAQ matériel
+FAQ vidéo
+FAQ multimédia
+</table></div>
+
+<hr>
+
+<a name="pres" class="ancre"></a><h2>Qu'est-ce que le son ?</h2>
+
+<p align="justify">Le son est une vibration de l'air, c'est-&agrave;-dire une suite de surpressions et de
+d&eacute;pressions de l'air par rapport &agrave; une moyenne, qui est la pression atmosph&eacute;rique.
+D'ailleurs pour s'en convaincre, il suffit de placer un objet bruyant (un r&eacute;veil
+par exemple) dans une cloche &agrave; vide pour s'apercevoir que l'objet initialement bruyant
+n'&eacute;met plus un seul son d&egrave;s qu'il n'est plus entour&eacute; d'air !
+
+<p align="justify">La fa&ccedil;on la plus simple de reproduire un son actuellement est de faire vibrer un objet.
+De cette fa&ccedil;on un violon &eacute;met un son lorsque l'archet fait vibrer ses cordes, un piano
+&eacute;met une note lorsque l'on frappe une touche, car un marteau vient frapper une corde et la fait
+vibrer.
+
+<p align="justify">Pour reproduire des sons, on utilise g&eacute;n&eacute;ralement des haut-parleurs. Il s'agit en fait d'une membrane
+reli&eacute;e &agrave; un &eacute;lectroaimant, qui, suivant les sollicitations d'un courant &eacute;lectrique
+va aller en avant et en arri&egrave;re tr&egrave;s rapidement, ce qui provoque une vibration
+de l'air situ&eacute; devant lui, c'est-&agrave;-dire du son !
+
+
+<p align="justify">De cette fa&ccedil;on on produit des ondes sonores qui peuvent &ecirc;tre repr&eacute;sent&eacute;es sur un graphique
+comme les variations de la pression de l'air (ou bien de l'&eacute;lectricit&eacute; dans l'&eacute;lectroaimant) en fonction
+du temps. On obtient alors une repr&eacute;sentation de la forme suivante&nbsp;:
+
+
+
+<p align="justify">Cette repr&eacute;sentation d'un son est appel&eacute;e <b>spectre de modulation d'amplitude</b> (modulation de l'amplitude d'un son en fonction du temps).
+Le <b>sonogramme</b> repr�sente par contre la variation des fr�quences sonores en fontion du temps.
+On peut remarquer qu'un sonogramme pr�sente une fr�quence fondamentale, � laquelle se superposent des fr�quences plus �lev�es, appel�es harmoniques.
+
+C'est ce qui permet d'arriver &agrave; distinguer plusieurs sources sonores : les sons graves auront
+des fr&eacute;quences basses, et les sons aigus des fr&eacute;quences &eacute;lev&eacute;es.
+
+
+
+Echantillonnage du son
+
+<p align="justify">Pour pouvoir repr&eacute;senter un son sur un ordinateur, il faut arriver &agrave; le convertir
+en valeurs num&eacute;riques, car celui-ci ne sait travailler que sur ce type de valeurs.
+Il s'agit donc de relever des petits &eacute;chantillons de son (ce qui revient &agrave; relever
+des diff&eacute;rences de pression) &agrave; des intervalles de temps pr&eacute;cis. On appelle cette
+action <b>l'&eacute;chantillonnage</b> ou la <b>num&eacute;risation du son</b>. L'intervalle
+de temps entre deux &eacute;chantillons est appel&eacute; taux d'&eacute;chantillonnage. Etant
+donn&eacute; que pour arriver &agrave; restituer un son qui semble continu &agrave; l'oreille il
+faut des &eacute;chantillons tous les quelques 100&nbsp;000<sup>&egrave;mes</sup> de seconde, il est plus
+pratique de raisonner sur le nombre d'&eacute;chantillons par seconde, exprim&eacute;s en <b>Hertz</b>
+
+(<i>Hz</i>). Voici quelques exemples de taux d'&eacute;chantillonnage et de qualit&eacute;s de son associ&eacute;es&nbsp;:
+
+<p align="justify">
+<table class="ccm">
+<tr>
+<th>Taux d'&eacute;chantillonnage</th>
+<th>Qualit&eacute; du son</th>
+</tr>
+<tr>
+<td>44&nbsp;100 Hz</td>
+<td>qualit&eacute; CD</td>
+</tr>
+<tr>
+<td>22&nbsp;000 Hz</td>
+<td>qualit&eacute; radio</td>
+</tr>
+<tr>
+<td>8&nbsp;000 Hz</td>
+<td>qualit&eacute; t&eacute;l&eacute;phone</td>
+</tr>
+</table>
+
+
+<p align="justify">La valeur du taux d'&eacute;chantillonnage, pour un CD audio par exemple, n'est pas
+arbitraire, elle d&eacute;coule en r&eacute;alit&eacute; du th&eacute;or&egrave;me
+de Shannon.
+La fr�quence d'�chantillonnage doit �tre suffisamment grande, afin de pr�server la forme du signal. Le th�or�me de Nyquist - Shannon
+stipule que la fr�quence d'�chantillonnage doit �tre �gale ou sup�rieure au double de la fr�quence maximale contenue dans ce signal.
+Notre oreille per�oit les sons environ jusqu'� 20&nbsp;000 Hz, il faut donc une fr�quence d'�chantillonnage au moins de l'ordre de 40&nbsp;000 Hz
+pour obtenir une qualit&eacute; satisfaisante.
+Il existe un certain nombre de fr�quences d'�chantillonnage normalis�es&nbsp;:
+<ul>
+<li><b>32 kHz</b> : pour la radio FM en num�rique (bande passante limit�e � 15 kHz)
+<li><b>44.1 kHz</b> : pour l'audio professionnelle et les compact-disques
+<li><b>48 kHz</b> : pour les enregistreurs num�riques multipistes professionnels et l'enregistrement grand public (DAT, MiniDisc...)
+</ul>
+
+<a name="representation" class="ancre"></a><h2>Repr&eacute;sentation informatique du son</h2>
+
+<p align="justify">A chaque &eacute;chantillon (correspondant &agrave; un intervalle de temps) est associ&eacute;e une valeur
+qui d&eacute;termine la valeur de la pression de l'air &agrave; ce moment, le son n'est donc plus
+repr&eacute;sent&eacute; comme une courbe continue pr&eacute;sentant des variations mais comme une
+suite de valeurs pour chaque intervalle de temps&nbsp;:
+
+<p align="center"><img src="images/echantil.gif">
+
+
+<p align="justify">L'ordinateur travaille avec des <a href="../base/binaire.htm">bits</a>,
+il faut donc d&eacute;terminer le nombre de valeurs que l'&eacute;chantillon peut prendre, cela revient
+&agrave; fixer le nombre de bits sur lequel on code les valeurs des &eacute;chantillons.
+<ul>
+<li>Avec un codage sur 8 bits, on a 2<sup>8</sup> possibilit&eacute;s de valeurs, c'est-&agrave;-dire 256 valeurs possibles
+<li>Avec un codage sur 16 bits, on a 2<sup>16</sup> possibilit&eacute;s de valeurs, c'est-&agrave;-dire 65536 valeurs possibles
+</ul>
+
+<p align="justify">Avec la seconde repr&eacute;sentation, on aura bien &eacute;videmment une qualit&eacute; de son bien meilleure, mais aussi
+un besoin en m&eacute;moire beaucoup plus important.
+
+<p align="justify">Enfin, la st&eacute;r&eacute;ophonie n&eacute;cessite deux canaux sur lesquels on enregistre individuellement un son qui sera
+fourni au haut-parleur de gauche, ainsi qu'un son qui sera diffus&eacute; sur celui de droite.
+
+<p align="justify">Un son est donc repr&eacute;sent&eacute; (informatiquement) par plusieurs param&egrave;tres&nbsp;:
+<ul>
+<li>la fr&eacute;quence d'&eacute;chantillonnage</li>
+<li>le nombre de bits d'un &eacute;chantillon</li>
+<li>le nombre de voies (une seule correspond &agrave; du mono, deux &agrave; de la st&eacute;r&eacute;o, et quatre &agrave; de la quadriphonie)</li>
+</ul>
+
+<a name="memoire" class="ancre"></a><h2>M&eacute;moire requise pour stocker un son</h2>
+
+<p align="justify">Il est simple de calculer la taille d'une s&eacute;quence sonore non compress&eacute;e. En effet,
+en connaissant le nombre de bits sur lequel est cod&eacute; un &eacute;chantillon, on conna&icirc;t la taille de celui-ci
+(la taille d'un &eacute;chantillon est le nombre de bits...).
+
+<p align="justify">Pour conna&icirc;tre la taille d'une voie, il suffit de conna&icirc;tre le taux d'&eacute;chantillonnage, qui va nous
+permettre de savoir le nombre d'&eacute;chantillons par seconde, donc la taille qu'occupe une seconde de musique. Celle-ci
+vaut&nbsp;:
+
+<br/>Taux d'&eacute;chantillonnage <b>x</b> Nombre de bits
+
+<p align="justify">Ainsi, pour savoir l'espace m&eacute;moire que consomme un extrait sonore de plusieurs
+secondes, il suffit de multiplier la valeur pr&eacute;c&eacute;dente par le nombre de secondes&nbsp;:
+
+<br/>Taux d'&eacute;chantillonnage <b>x</b> Nombre de bits <b>x</b> Nombre de secondes
+
+<p align="justify">Enfin, la taille finale de l'extrait est &agrave; multiplier par le nombre de voies (elle sera alors
+deux fois plus importante en st&eacute;r&eacute;o qu'en mono...).
+
+<br/>La taille en bits d'un extrait sonore est ainsi &eacute;gale &agrave; &nbsp;:
+
+<p align="justify"><b>Taux d'&eacute;chantillonnage x Nombre de bits x Nombre de secondes x Nombre de voies</b>
+
+<h2 id="sujets_sim">Trucs & astuces pertinents trouv&eacute;s dans la base de connaissances</h2><table class="simili"><tr class="sb">
+<td style="width:75px"><span class="">21/02&nbsp;16h08</span></td><td valign="middle"><a href="http://www.commentcamarche.net/faq/sujet-5205-musique-en-continu-dans-presentation-powerpoint"><img src="../images/carre.gif" border="0" alt=""></a>&nbsp;<a href="http://www.commentcamarche.net/faq/sujet-5205-musique-en-continu-dans-presentation-powerpoint">Musique en continu dans pr�sentation PowerPoint</a> (<a href="http://www.commentcamarche.net/faq/0-accueil">Accueil</a>)</td>
+
+
+</body>
+</html>

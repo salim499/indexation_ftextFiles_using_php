@@ -1,0 +1,78 @@
+
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="copyright" content="1998 by Jean-Fran�ois Pillou">
+<META NAME="ROBOTS" content="all">
+<META NAME="author" content="Jean-Fran�ois Pillou">
+<META NAME="subject" content="L'assembleur">
+<META NAME="topic" content="Assembleur">
+<META NAME="keywords" content="&eacute;crire le programme en assembleur, assembleur, langage, Langage, enregistrer le fichier source">
+<META NAME="description" content="Ce document intitul� L'assembleur - Fichier source et compilation,  issu de l'encyclop�die informatique Comment �a Marche">
+<META NAME="title" content="L'assembleur - Fichier source et compilation">
+<title>Ecrire un programme en assembleur</title>
+<link rel="stylesheet" href="../ccm.css" type="text/css">
+
+
+
+
+</head>
+
+
+<body>
+
+
+L'assembleur - Fichier source et compilation</h1><table border="0" cellpadding="0" cellspacing="0" width="722">
+
+
+
+Assembleur
+Assembleur
+Compilation
+Instructions
+Adressage
+Instructions arithm&eacute;tiques et logiques
+Affectation
+Branchements
+Pile
+Proc&eacute;dures
+Segmentation de la m&eacute;moire
+Liste des principales instructions
+A lire aussi
+FAQ langages
+FAQ programmation
+
+
+<a name="compilation" class="ancre"></a><h2>La compilation du programme</h2>
+
+<p align="justify">Le programme doit &ecirc;tre saisi dans un fichier texte non format&eacute; (c'est-&agrave;-dire sans caract&egrave;res en gras, soulign&eacute;, avec
+des polices de caract&egrave;res de diff&eacute;rentes tailles, ...) appel&eacute; fichier source. En effet, l'assembleur
+(le programme permettant de faire la traduction du langage assembleur en langage machine) permet uniquement
+de cr&eacute;er un fichier assembl&eacute; &agrave; partir du fichier source (il devra comporter l'extension .ASM, en s'appelant par exemple <i>source.asm</i>
+
+ou n'importe quel autre nom suivi de l'extension .asm).
+
+<p align="justify">L'assembleur va fournir un <i>fichier objet</i> (dont l'extension est .obj) qui va contenir l'ensemble des instructions traduites
+en instructions machines. Ce fichier .OBJ ne pourra toutefois pas s'ex&eacute;cuter directement car il faut encore lier les diff&eacute;rents fichiers.
+
+<br/>Comment &ccedil;a les diff&eacute;rents fichiers ?
+
+<br/>En effet il est possible de construire un ex&eacute;cutable &agrave; partir de plusieurs fichiers sources (&agrave; partir d'un
+certain niveau de programmation il devient int&eacute;ressant de cr&eacute;er des fichiers contenant des fonctions...). Ainsi, m&ecirc;me si
+vous avez un seul fichier objet il vous faudra utiliser un programme (appel&eacute; <i>&eacute;diteur de liens</i>) qui va vous permettre
+de cr&eacute;er un fichier ex&eacute;cutable (dont l'extension sera &laquo;&nbsp;<i>.exe</i>&nbsp;&raquo;).
+
+Note d'un visiteur
+
+Les fichiers de sortie ne sont pas obligatoirement des
+fichiers object, ni m&ecirc;me un ex&eacute;cutable !
+
+<br/>Il est en effet possible de g&eacute;n&eacute;rer un fichier binaire ne comportant
+que la traduction exacte du fichier source.
+Ce fichier binaire pourra par exemple &ecirc;tre utilis&eacute; comme programme
+d'amor&ccedil;age (boot) d'un ordinateur lorsqu'il sera plac&eacute; sur le
+
+secteur d'amor&ccedil;age</a> (<i>MBR</i>) d'une disquette
+ou d'undisque dur
+
+
+</body>

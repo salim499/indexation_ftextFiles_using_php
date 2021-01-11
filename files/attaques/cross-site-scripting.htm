@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+	<meta charset="utf-8">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="copyright" content="2005 by Jean-Fran�ois Pillou">
+<META NAME="ROBOTS" content="all">
+<META NAME="author" content="Jean-Fran�ois Pillou">
+<META NAME="subject" content="Comment �a marche? [Le Spoofing IP]">
+<META NAME="topic" content="Cross site scripting">
+<META NAME="keywords" content="Cross-site scripting, XSS, CSS, Attaque XSS, Attaque CSS">
+<META NAME="title" content="Attaques - Cross-Site Scripting">
+<title>Attaques Cross-Site Scripting</title>
+<link rel="stylesheet" href="../ccm.css" type="text/css">
+
+
+<link rel="alternate" type="application/rss+xml" title="CCM: Actualit&eacute; informatique" href="http://www.commentcamarche.net/rss/actualite.php3">
+<link rel="alternate" type="application/rss+xml" title="CCM: Actualit&eacute;s du site CommentCaMarche.net" href="http://www.commentcamarche.net/rss/rss.php3">
+</head>
+
+<body>
+
+ Attaques - Cross-Site Scripting
+</table>
+Attaques / Arnaques 
+Piratage
+Pirates
+Typologie de pirates
+M&eacute;thodologie
+Exploits
+Attaques cryptographiques
+Mot de passe
+Man in the middle
+Rejeu</a></td></tr>
+D&eacute;ni de service
+D&eacute;ni de service
+Attaque par r&eacute;flexion
+Ping de la mort
+Fragmentation
+Land
+SYN
+Techniques
+Usurpation d'adresse IP spoofing
+Vol de session hijacking
+ARP poisoning
+Ecoute r&eacute;seausniffers
+Balayage de ports Port scanning</a>)</td></tr>
+Spam
+Mail-bombing
+Vuln&eacute;rabilit&eacute;s du web
+Attaques web
+Falsification de la saisie
+Manipulation d'URL
+Cross-Site Scripting
+Injection SQL
+Arnaques
+Ing&eacute;nierie socialesocial engineering
+Scam
+Phishing
+Loteries
+Plus d'information
+Virus
+Cheval de Troie
+Spyware
+Hoax
+FAQ s&eacute;curit&eacute;
+ternet">FAQ Internet
+
+Injection de code malicieux
+
+<p align="justify">Les attaques de type <b>Cross-Site Scripting</b> (not&eacute;e parfois <i>XSS</i> ou <i>CSS</i>)
+sont des attaques visant les sites web affichant dynamiquement du contenu utilisateur
+sans effectuer de contr&ocirc;le et d'encodage des informations saisies
+par les utilisateurs.
+Les attaques Cross-Site Scripting consistent ainsi &agrave; forcer un site web &agrave; afficher du code
+HTML ou des scripts saisis par les utilisateurs. Le code ainsi inclus (le terme &laquo;&nbsp;inject&eacute;&nbsp;&raquo;
+est habituellement utilis&eacute;) dans un
+site web vuln&eacute;rable est dit &laquo;&nbsp;malicieux&nbsp;&raquo;.
+
+<p align="justify">Il est courant que les sites affichent des messages d'information reprenant
+directement un param&egrave;tre entr&eacute; par l'utilisateur. L'exemple le plus classique
+est celui des &laquo;&nbsp;pages d'erreur 404&nbsp;&raquo;. Certains sites web modifient
+le comportement du site web, afin d'afficher un message d'erreur personnalis&eacute;e lorsque
+la page demand&eacute;e par le visiteur n'existe pas. Parfois la page g&eacute;n&eacute;r&eacute;e
+dynamiquement affiche le nom de la page demand&eacute;e. Appelons <i>http://site.vulnerable</i> un
+site poss&eacute;dant  une telle faille. L'appel de l'URL <i>http://site.vulnerable/page-inexistante</i>
+correspondant &agrave; une page n'existant pas provoquera l'affichage d'un message d'erreur indiquant
+que la page &laquo;&nbsp;page-inexistante&nbsp;&raquo; n'existe pas. Il est ainsi possible de faire
+afficher ce que l'on souhaite au site web en rempla&ccedil;ant
+ &laquo;&nbsp;page-inexistante&nbsp;&raquo;  par toute autre cha&icirc;ne de caract&egrave;re.
+
+
+<p align="justify">Ainsi, si aucun contr&ocirc;le n'est effectu&eacute; sur le contenu fourni par l'utilisateur,
+il est possible d'afficher du code HTML arbitraire sur une page web, afin d'en changer
+l'aspect, le contenu ou bien le comportement.
+
+<p align="justify">De plus, la plupart des navigateurs sont dot&eacute;s de la capacit&eacute;
+d'interpr&ecirc;ter des scripts contenus dans les pages web, &eacute;crits dans diff&eacute;rents
+langages, tel que <a href="../javascript/jsintro.htm">JavaScript</a>, <a href="../vbscript/vbsintro.htm">VBScript</a>, <a href="../java/java.htm">Java</a>, ActiveX  ou Flash.
+Les balises HTML suivantes permettent ainsi d'incorporer des scripts ex&eacute;cutables dans
+une page web : &lt;SCRIPT&gt;, &lt;OBJECT&gt;, &lt;APPLET&gt;, and &lt;EMBED&gt;.
+
+<p align="justify">Il est ainsi possible &agrave; un pirate d'injecter  du code
+arbitraire dans la page web, afin que celui-ci soit ex&eacute;cut&eacute; sur le poste de l'utilisateur
+dans le contexte de s&eacute;curit&eacute; du site vuln&eacute;rable.  Pour ce faire,
+il lui suffit de remplacer la valeur du texte destin&eacute; &agrave; &ecirc;tre
+affich&eacute; par un script, afin que celui s'affiche dans la page web.
+Pour peu que le navigateur de l'utilisateur soit configur&eacute; pour ex&eacute;cuter
+de tels scripts, le code malicieux a acc&egrave;s &agrave; l'ensemble des donn&eacute;es
+partag&eacute;es par la page web de l'utilisateur et le serveur (cookies, champs de formulaires,
+etc.).
+
+<a name="xss" class="ancre"></a><h2>Cons&eacute;quences</h2>
+
+<p align="justify">Gr&acirc;ce aux vuln&eacute;rabilit&eacute;s Cross-Site Scripting,
+il est possible &agrave; un pirate de r&eacute;cup&eacute;rer par ce biais les donn&eacute;es
+&eacute;chang&eacute;es entre l'utilisateur et le site web concern&eacute;. Le code
+inject&eacute; dans la page web peut ainsi servir &agrave; afficher un formulaire
+afin de tromper l'utilisateur et lui faire saisir par exemple des informations d'authentification.
+
+<p align="justify">Par ailleurs, le script inject&eacute; peut permettre de rediriger l'utilisateur vers une page sous le contr&ocirc;le du pirate,
+poss&eacute;dant &eacute;ventuellement la m&ecirc;me interface graphique que le site compromis
+afin de tromper l'usager.
+
+<p align="justify">Dans un tel contexte, la relation de confiance existant entre l'utilisateur et le site
+web est compl&egrave;tement compromise.
+
+<a name="persistance" class="ancre"></a><h2>Persistance de l'attaque</h2>
+
+<p align="justify">Lorsque les donn&eacute;es saisies par l'utilisateur sont stock&eacute;es
+sur le serveur pendant un certain temps (cas d'un forum de discussion par exemple), l'attaque est dite &laquo;&nbsp;<b>persistante</b>&nbsp;&raquo;.
+En effet, tous les utilisateurs du site web acc&egrave;s &agrave; la page dans laquelle le
+
+</body>
+</html>
